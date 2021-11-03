@@ -1,6 +1,8 @@
 # Placementsoftware
 <h1/> Placement Software </h1>
-<p>We are developing the software for the placement management for Sri Ramakrishna Institute of Technology <b> SRIT </b> 
+<p>
+  <img src="https://www.srit.org/images/sliders/banner00.jpg" />
+ We are developing the software for the placement management for Sri Ramakrishna Institute of Technology <b> SRIT </b> 
 and also we are making this software in the SCRUM (AGILE) Methods . We are gathering into a Team Format and follow the rules and regulations of SCRUM methodology </p>
 <p>
 <h4> Scrum Team Members : </h4>
