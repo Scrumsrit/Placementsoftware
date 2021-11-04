@@ -10,11 +10,26 @@ and also we are making this software in the SCRUM (AGILE) Methods . We are gathe
   
 <h4> SCRUM TEAM MEMBERS  : </h4>
   <li> POONKAWIN S</li>
-  <li> SHALINI </li>
+  <li> SHALINI S </li>
   <li> SHRIHARI </li>
   <li> SHRISRUTHI M</li>
   <li> RAGUVEER PRASADTH </li>
   <li> KARTHICK </li>
   <li> DINESH E </li>
+  
+  <h4>FEATURES OF THIS SOFTWARE</h4>
+  <li>Admin Panel Control</li>
+  <li>Notification Through Email </li>
+  <li>Report Generation </li>
+  <li>Sorting the list of the Student </li> 
+  <li>MassData Uploading Section</li>
+  <li>Student's Details Entry Form </li>
+  <li>Company 's Login Portal </li>
+  <hr>
+  <h4>SOFTWARE DEVELOPED  </h4>
+  <li>JAVA</li>
+  <li>MYSQL</li>
+  <li>PYTHON </li>
+  <li>MAVEN</li>
 </p>
 
