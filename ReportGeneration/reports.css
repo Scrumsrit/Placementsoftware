@@ -1,0 +1,80 @@
+*
+{
+    margin:0;
+    padding:0;
+}
+#columns{
+    display:flex;
+    margin: 23px 25%;
+    flex-wrap: wrap;
+    
+}
+
+select{
+
+    background-color: white;
+    padding: 14px 37px;
+    border-radius:12px;
+    margin: 5px 16px;
+}
+#addbtn{
+  
+    border-radius:12px;
+    padding: 15px 57px;
+    font-size: large;
+    font-weight: 900;
+    background-color: green;
+    color: white;
+    box-shadow: 0 0 5px grey;
+    border:none;
+    
+
+}
+button{
+  padding: 15px 57px;
+  border-radius: 12px;
+  border: none;
+  background-color: purple;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+
+
+}
+button:hover{
+    background-color: saddlebrown;
+}
+#section2
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HSC , .SSLC ,.CGPA
+{
+    margin: 12px 0;
+    padding: 0 31px ;
+}
+table
+{
+   margin-top: 12px;
+   width: 50%;
+   border: 2px solid rgba(19,17,17);
+   box-shadow: 0 0 30px grey;
+   text-transform: uppercase;
+
+   
+}
+td
+{
+   text-align: center;
+   padding: 20px 30px;
+   border-collapse: collapse;
+
+}
+th{
+    text-align: center;
+    padding: 10px 30px;
+    background-color: slateblue;
+    color: white;
+}
