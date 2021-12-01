@@ -1,23 +1,34 @@
 <?php
-function studentForm(){
-    $batch = $_POST["batch"];
-    $registerNumber = $_POST["registerNumber"];
-    $firstName = $_POST["firstName"];
-    $middleName = $_POST["middleName"];
-    $lastName = $_POST["lastName"];
-    $department = $_POST["department"];
-    $branch = $_POST["branch"];
-    $phoneNumber = $_POST["phoneNumber"];
-    $alternateNumber = $_POST["alternateNumber"];
-    $parentNumber = $_POST["parentNumber"];
-    $officialMail = $_POST["officialMail"];
-    $personalMail = $_POST["personalMail"];
-    $address = $_POST["address"];
-    $pincode = $_POST["pincode"];
-    $sslc = $_POST["sslc"];
-    $hsc = $_POST["hsc"];
-    $cgpa = $_POST["cgpa"];
-    $hoa = $_POST["hoa"];
+    include('config.php');
+    session_start();
+    $conn = $con;
+    function studentForm(){
+        global $conn;
+        $batch = $_POST["batch"];
+        $registerNumber = $_POST["registerNumber"];
+        $firstName = $_POST["firstName"];
+        $middleName = $_POST["middleName"];
+        $lastName = $_POST["lastName"];
+        $department = $_POST["department"];
+        $branch = $_POST["branch"];
+        $phoneNumber = $_POST["phoneNumber"];
+        $alternateNumber = $_POST["alternateNumber"];
+        $parentNumber = $_POST["parentNumber"];
+        $officialMail = $_POST["officialMail"];
+        $personalMail = $_POST["personalMail"];
+        $address = $_POST["address"];
+        $pincode = $_POST["pincode"];
+        $sslc = $_POST["sslc"];
+        $hsc = $_POST["hsc"];
+        $cgpa = $_POST["cgpa"];
+        $hoa = $_POST["hoa"];
+//         $query = "INSERT INTO STUDENT_DETAILS (BATCH, REGISTER_NUMBER, FIRST_NAME, MIDDLE_NAME, LAST_NAME, DEPARTMENT, BRANCH, PHONE_NUMBER, ALTERNATE_NUMBER, PARENT_CONTACT_NUMBER, OFFICIAL_MAILID, PERSONAL_MAILID, ADDRESS, PINCODE, SSLC, HSC, CGPA, HISTORY_OF_ARREARS) VALUES ('$batch','$registerNumber','$firstName','$middleName','$lastName','$department','$branch','$phoneNumber','$alternateNumber','$parentNumber','$officialMail','$personalMail','$address','$pincode','$sslc','$hsc','$cgpa','$hoa')";
+        $query = "INSERT INTO STUDENT_DETAILS VALUES ('$batch','$registerNumber','$firstName','$middleName','$lastName','$department','$branch','$phoneNumber','$alternateNumber','$parentNumber','$officialMail','$personalMail','$address','$pincode','$sslc','$hsc','$cgpa','$hoa')";
+        if (mysqli_query($conn, $query)) {
+          echo "New record created successfully";
+        } else {
+          echo "Error: " . $query . "<br>" . mysqli_error($conn);
+        }
     }
 ?>
 
@@ -28,7 +39,7 @@ function studentForm(){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creation Form</title>
-    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="../Css/style.css">
 </head>
 <body>
     <div id="titlebar"><center>Student's Entry Form </center></div>
@@ -48,11 +59,11 @@ function studentForm(){
             <label>Register Number</label>
             <input name="registerNumber" type="number" placeholder=" x x x x x x x"/><br>
             <label>First Name </label>
-            <input name="firstName" type="text" /><br>
+            <input name="firstName" type="text" placeholder="FIRSTNAME"/><br>
             <label>Middle Name</label>
-            <input name="middleName" type="text" /><br>
+            <input name="middleName" type="text" placeholder="MIDDLENAME"/><br><br>
             <label>Last Name</label>
-            <input name="lastName" type="text" /><br>
+            <input name="lastName" type="text" placeholder="LASTTNAME"/><br>
             <label>Department</label>
             <select name="department">
                 <option>CIVIL</option>
@@ -76,7 +87,7 @@ function studentForm(){
             <label>Phone Number</label>
             <input name="phoneNumber" type="number" placeholder="X X X X X X X X X X"><br>
             <label>Alternate Number</label>
-            <input name="alternateNumber" type="number" placeholder="X X X X X X X X X X"><br>
+            <input name="alternateNumber" type="number" value="-" placeholder="X X X X X X X X X X"><br>
             <label>Parent's Number</label>
             <input name="parentNumber" type="number" placeholder="X X X X X X X X X X"><br>
             <label>Official Mail</label>
@@ -106,11 +117,9 @@ function studentForm(){
     </form>
     <div>
         <?php
-
-        if($_SERVER["REQUEST_METHOD"] === "POST"){
+        if($_SERVER['REQUEST_METHOD'] === 'POST'){
             studentForm();
         }
-
         ?>
     </div>
 </body>

@@ -48,7 +48,7 @@
 <html>
     <head>
         <title>Report Generation</title>
-        <link rel="stylesheet" href="reports.css" />
+        <link rel="stylesheet" href="../Css/reports.css" />
       
     </head>
     <body>
@@ -200,7 +200,7 @@
         <script type="text/javascript">
             function Export() {
                 $("#result").table2excel({
-                    filename: "Table.xlsx"
+                    filename: "StudentReport.xlsx"
                 });
             }
         </script>
