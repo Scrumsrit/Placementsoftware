@@ -32,10 +32,10 @@ function massDataUpload(){
             $hoa = $worksheet->getCellByColumnAndRow(17,$row)->getValue();
             $query = "INSERT INTO STUDENT_DETAILS VALUES ('$batch','$registerNumber','$firstName','$middleName','$lastName','$department','$branch','$phoneNumber','$alternateNumber','$parentNumber','$officialMail','$personalMail','$address','$pincode','$sslc','$hsc','$cgpa','$hoa')";
             if (!mysqli_query($conn, $query)) {
-              echo "alert('Error At Row $row <br>')";
+              echo "Error At Row $row <br>" . mysqli_error($conn);
             }
         }
-        echo "alert('UPLOAD SUCCESSFULL')";
+        echo "<h1>UPLOAD SUCCESSFULL</h1>";
     }
 }
 
@@ -63,14 +63,15 @@ function massDataUpload(){
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="file" name="uploadFile" required/>
                     <input  id="submit"  type="submit" >
+                <?php
+                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                        massDataUpload();
+                    }
+                ?>
             </div>
         </div>
         <script type="text/javascript">
-            <?php
-                if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                    massDataUpload();
-                }
-            ?>
+            <?php echo "alert('Upload')" ?>
         </script>
     </body>
 </html>
