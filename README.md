@@ -1,10 +1,10 @@
 
-<h1/> Placement Software </h1>
+<h1 align="center"> Placement Software </h1>
 <p>
   <img src="https://www.srit.org/images/sliders/banner00.jpg" />
  We are developing the software for the placement management for Sri Ramakrishna Institute of Technology <b> SRIT </b> 
 and also we are making this software in the SCRUM (AGILE) Methods . We are gathering into a Team Format and follow the rules and regulations of SCRUM methodology </p>
-<p>
+
   <h4> SCRUM'S MENTOR </h4>
   <li>SHANKER HARINARAYANAN </li>
   
@@ -27,9 +27,9 @@ and also we are making this software in the SCRUM (AGILE) Methods . We are gathe
   <li>Company 's Login Portal </li>
   <hr>
   <h4>SOFTWARE DEVELOPED  </h4>
-  <li>JAVA</li>
+  <li>HTML</li>
+  <li>PHP</li>
   <li>MYSQL</li>
-  <li>PYTHON </li>
-  <li>MAVEN</li>
-</p>
+  <li>AWS SERVER</li>
+
 
