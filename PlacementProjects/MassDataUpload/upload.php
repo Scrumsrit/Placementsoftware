@@ -32,7 +32,7 @@ function massDataUpload(){
             $hoa = $worksheet->getCellByColumnAndRow(17,$row)->getValue();
             $query = "INSERT INTO STUDENT_DETAILS VALUES ('$batch','$registerNumber','$firstName','$middleName','$lastName','$department','$branch','$phoneNumber','$alternateNumber','$parentNumber','$officialMail','$personalMail','$address','$pincode','$sslc','$hsc','$cgpa','$hoa')";
             if (!mysqli_query($conn, $query)) {
-              echo "Error At Row $row <br>" . mysqli_error($conn);
+              echo "alert('Error At Row $row <br>')";
             }
         }
         echo "alert('UPLOAD SUCCESSFULL')";
