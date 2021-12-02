@@ -168,21 +168,21 @@
                 <span id="sslcFrom">50%</span>-
                 <span id="sslcTo">50%</span></h3>
                 <input oninput="document.getElementById('sslcFrom').innerHTML=this.value+'%';" name="sslcFromSlider" type="range" min="1" max="99" value="50">
-                <input oninput="document.getElementById('sslcTo').innerHTML=this.value+'%';" name="sslcToSlider" type="range" min="1" max="100" value="50">
+                <input oninput="document.getElementById('sslcTo').innerHTML=this.value+'%';" name="sslcToSlider" type="range" min="1" max="100" value="100">
             </div>
             <div class="HSC">
                 <h3 align="center">HSC:
                 <span id="hscFrom">50%</span>-
                 <span id="hscTo">50%</span></h3>
                 <input oninput="document.getElementById('hscFrom').innerHTML=this.value+'%';" name="hscFromSlider" type="range" min="1" max="99" value="50">
-                <input oninput="document.getElementById('hscTo').innerHTML=this.value+'%';" name="hscToSlider" type="range" min="1" max="100" value="50">
+                <input oninput="document.getElementById('hscTo').innerHTML=this.value+'%';" name="hscToSlider" type="range" min="1" max="100" value="100">
             </div>
             <div class="CGPA">
                 <h3 align="center">CGPA:
                 <span id="cgpaFrom">5</span>-
                 <span id="cgpaTo">5</span></h3>
                 <input oninput="document.getElementById('cgpaFrom').innerHTML=this.value;" name="cgpaFromSlider" type="range" min="1" max="10" value="5">
-                <input oninput="document.getElementById('cgpaTo').innerHTML=this.value;" name="cgpaToSlider" type="range" min="1" max="10" value="5">
+                <input oninput="document.getElementById('cgpaTo').innerHTML=this.value;" name="cgpaToSlider" type="range" min="1" max="10" value="10">
             </div>
             <button>submit</button> </div>
           
