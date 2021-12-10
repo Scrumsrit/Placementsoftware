@@ -14,10 +14,10 @@ function massDataUpload(){
         for($row=2; $row<=$highestRow; $row++){
             $batch = $worksheet->getCellByColumnAndRow(0,$row)->getValue();
             $registerNumber = $worksheet->getCellByColumnAndRow(1,$row)->getValue();
-            $firstName = $worksheet->getCellByColumnAndRow(2,$row)->getValue();
-            $middleName = $worksheet->getCellByColumnAndRow(3,$row)->getValue();
-            $lastName = $worksheet->getCellByColumnAndRow(4,$row)->getValue();
-            $department = $worksheet->getCellByColumnAndRow(5,$row)->getValue();
+            $firstName = strtoupper($worksheet->getCellByColumnAndRow(2,$row)->getValue());
+            $middleName = strtoupper($worksheet->getCellByColumnAndRow(3,$row)->getValue());
+            $lastName = strtoupper($worksheet->getCellByColumnAndRow(4,$row)->getValue());
+            $department = strtoupper($worksheet->getCellByColumnAndRow(5,$row)->getValue());
             $branch = $worksheet->getCellByColumnAndRow(6,$row)->getValue();
             $phoneNumber = $worksheet->getCellByColumnAndRow(7,$row)->getValue();
             $alternateNumber = $worksheet->getCellByColumnAndRow(8,$row)->getValue();
@@ -32,10 +32,10 @@ function massDataUpload(){
             $hoa = $worksheet->getCellByColumnAndRow(17,$row)->getValue();
             $query = "INSERT INTO STUDENT_DETAILS VALUES ('$batch','$registerNumber','$firstName','$middleName','$lastName','$department','$branch','$phoneNumber','$alternateNumber','$parentNumber','$officialMail','$personalMail','$address','$pincode','$sslc','$hsc','$cgpa','$hoa')";
             if (!mysqli_query($conn, $query)) {
-              echo "Error At Row $row <br>" . mysqli_error($conn);
+              echo "alert('Error At Row $row <br>')";
             }
         }
-        echo "<h1>UPLOAD SUCCESSFULL</h1>";
+        echo "alert('UPLOAD SUCCESSFULL')";
     }
 }
 
@@ -63,15 +63,14 @@ function massDataUpload(){
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="file" name="uploadFile" required/>
                     <input  id="submit"  type="submit" >
-                <?php
-                    if($_SERVER['REQUEST_METHOD'] === 'POST'){
-                        massDataUpload();
-                    }
-                ?>
             </div>
         </div>
         <script type="text/javascript">
-            <?php echo "alert('Upload')" ?>
+            <?php
+                if($_SERVER['REQUEST_METHOD'] === 'POST'){
+                    massDataUpload();
+                }
+            ?>
         </script>
     </body>
 </html>
