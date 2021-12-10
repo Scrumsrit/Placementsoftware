@@ -207,7 +207,13 @@
         <script>
             var count = 6
             function addSelectTag(){
+                var old_column_values = document.getElementsByName('column[]');
                 document.getElementById('columns').innerHTML += '<select name="column[]"><option value="none">COLUMN '+count+'</option><option value="BATCH">BATCH</option><option value="REGISTER_NUMBER">REGISTER_NUMBER</option><option value="FIRST_NAME">FIRST_NAME</option><option value="MIDDLE_NAME">MIDDLE_NAME</option><option value="LAST_NAME">LAST_NAME</option><option value="DEPARTMENT">DEPARTMENT</option><option value="BRANCH">BRANCH</option><option value="PHONE_NUMBER">PHONE_NUMBER</option><option value="ALTERNATE_NUMBER">ALTERNATE_NUMBER</option><option value="PARENT_CONTACT_NUMBER">PARENT_CONTACT_NUMBER</option><option value="OFFICIAL_MAILID">OFFICIAL_MAILID</option><option value="PERSONAL_MAILID">PERSONAL_MAILID</option><option value="ADDRESS">ADDRESS</option><option value="PINCODE">PINCODE</option><option value="SSLC">SSLC</option><option value="HSC">HSC</option><option value="CGPA">CGPA</option><option value="HISTORY_OF_ARREARS">HISTORY_OF_ARREARS</option></select><br>'
+                var new_column_values = document.getElementsByName('column[]');
+                for(i=1; i<old_column_values.length; i++){
+//                     new_column_values[i].value = old_column_values[i];
+                    alert(old_column_values[0].value);
+                }
                 count += 1;
             }
         </script>
