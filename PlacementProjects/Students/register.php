@@ -1,5 +1,5 @@
 <?php
-    include('config.php');
+    include('../config/config.php');
     session_start();
     $conn = $con;
     function studentForm(){
@@ -9,7 +9,7 @@
         $firstName = $_POST["firstName"];
         $middleName = $_POST["middleName"];
         if(strlen($middleName)<1){
-            $middleName = "-";
+            $middleName = " ";
         }
         $lastName = $_POST["lastName"];
         $department = $_POST["department"];
@@ -17,7 +17,7 @@
         $phoneNumber = $_POST["phoneNumber"];
         $alternateNumber = $_POST["alternateNumber"];
         if(strlen($alternateNumber)<1){
-            $alternateNumber = "-";
+            $alternateNumber = " ";
         }
         $parentNumber = $_POST["parentNumber"];
         $officialMail = $_POST["officialMail"];
