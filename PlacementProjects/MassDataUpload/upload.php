@@ -1,7 +1,7 @@
 <?php
 
 function massDataUpload(){
-    include('config.php');
+    include('../config/config.php');
     session_start();
     $conn = $con;
     $uploadFile = $_FILES['uploadFile']['tmp_name'];
